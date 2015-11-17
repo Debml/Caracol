@@ -26,13 +26,23 @@ public class Controlador {
     }
     
     public void Alumno(String nombre, int edad, String telefono, String email, String direccion) {
-        Alumno aux = new Alumno(nombre, telefono, email, direccion, edad, 0);
+        int id = alumnos.size()+1;
+        Alumno aux = new Alumno(nombre, telefono, email, direccion, edad, id);
         alumnos.add(aux);
     }
     
-    public void Curso(String nombre, 0, String tutor, int cupo, String lugar, Date fecha_inicio, Date fecha_fin) {
-        Curso aux = Curso(nombre, tutor, cupo, lugar,fecha_inicio, fecha_fin);
-        cursos.add(aux);
+    public void Curso(String nombre, String tutor, int cupo, String lugar, Date fecha_inicio, Date fecha_fin) {
+        int id = cursos.size()+1;
+        Tutor aux = null;
+        for (Tutor tutorAux : tutores) {
+            if (tutorAux.getNombre() == tutor) {
+                aux = tutorAux;
+                break;
+            }
+        }
+        
+        Curso aux2 = new Curso(nombre, id, aux, fecha_inicio, fecha_fin, lugar, cupo);
+        cursos.add(aux2);
     }
     
     

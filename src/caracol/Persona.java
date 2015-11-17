@@ -10,16 +10,20 @@ package caracol;
  * @author Debml
  */
 public class Persona {
-    String nombre;
-    String telefono;
-    String email;
-    int id;
+    protected String nombre;
+    protected String telefono;
+    protected String email;
+    protected int id;
     
     Persona(String nombre, String telefono, String email, int id){
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
         this.id = id;
+    }
+    
+    public String getNombre() {
+        return nombre;
     }
     
 }
