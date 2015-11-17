@@ -45,6 +45,37 @@ public class Controlador {
         cursos.add(aux2);
     }
     
+    public void modificarAlumno(String nombre, String valor, int id) {
+        Alumno aux = null;
+        for (Alumno alumnoAux : alumnos) {
+            if (alumnoAux.getNombre() == nombre) {
+                aux = alumnoAux;
+                break;
+            }
+        }
+        
+        switch (id) {
+            case 1:
+                aux.setNombre(valor);
+                break;
+            case 2:
+                aux.setEdad(Integer.parseInt(valor));
+                break;
+            case 3:
+                aux.setTelefono(valor);
+                break;
+            case 4:
+                aux.setEmail(valor);
+                break;
+            case 5:
+                aux.setDireccion(valor);
+                break;
+            default:
+                break;
+        }
+        
+    }
+    
     
 }
 

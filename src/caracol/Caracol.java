@@ -104,7 +104,7 @@ public class Caracol {
         menuOption = Integer.parseInt(stdIn.readLine());
         
         switch(menuOption) {
-            case 1:
+            case 1://registrar alumno
                 String nombre, telefono, email, direccion;
                 int edad;
                 
@@ -123,22 +123,75 @@ public class Caracol {
                 break;
             case 2:
                 break;
-            case 3:
+            case 3: //modificar alumno
+                String edadS;
+                int modAlumnoDecision = 0;
+                while(modAlumnoDecision != 6) {
+                    readFile = new BufferedReader (new FileReader 
+             ("/Users/Mauro/Dropbox/5 Semestre/AMSS/McDinero/Caracol/Caracol/"
+                     + "src/caracol/Archivos/modificarAlumno.txt"));
+                    //imprimir menu
+                    line = readFile.readLine();
+                    while(line != null) {
+                        System.out.println(line);
+                        line = readFile.readLine();
+                    }
+                    
+                    modAlumnoDecision = Integer.parseInt(stdIn.readLine());
+                    
+                    System.out.println("Nombre actual del alumno:");
+                    String nombreA = stdIn.readLine();
+                    
+                    switch (modAlumnoDecision) {
+                        case 1:
+                            System.out.println("Nuevo nombre del alumno:");
+                            nombre = stdIn.readLine();
+                            control.modificarAlumno(nombreA, nombre, modAlumnoDecision);
+                            break;
+                        case 2:
+                            System.out.println("Nueva edad del alumno:");
+                            edadS = stdIn.readLine();
+                            control.modificarAlumno(nombreA, edadS, modAlumnoDecision);
+                            break;
+                        case 3:
+                            System.out.println("Nuevo telefono del alumno:");
+                            telefono = stdIn.readLine();
+                            control.modificarAlumno(nombreA, telefono, modAlumnoDecision);
+                            break;
+                        case 4:
+                            System.out.println("Nuevo email del alumno:");
+                            email = stdIn.readLine();
+                            control.modificarAlumno(nombreA, email, modAlumnoDecision);
+                            break;
+                        case 5:
+                            System.out.println("Nueva dirección del alumno:");
+                            direccion = stdIn.readLine();
+                            control.modificarAlumno(nombreA, direccion, modAlumnoDecision);
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                    
+                    
+                }
                 break;
                 
             case 4:
                 break;
-            case 5:
+            case 5://registrar curso
                 String nombreCurso, lugar, tutor;
                 Date fecha_inicio, fecha_fin;
                 int cupo, ano, mes, dia, hora, minuto;
                 
                 System.out.println("Nombre del curso:");
-                nombre = stdIn.readLine();
+                nombreCurso = stdIn.readLine();
                 System.out.println("Lugar del curso:");
                 lugar = stdIn.readLine();
                 System.out.println("Cupo del curso:");
                 cupo = Integer.parseInt(stdIn.readLine());
+                System.out.println("Nombre del tutor del curso:");
+                tutor = stdIn.readLine();
                 System.out.println("Fecha de inicio del curso");
                 System.out.println("Año:");
                 ano = Integer.parseInt(stdIn.readLine());
@@ -164,8 +217,7 @@ public class Caracol {
                 minuto = Integer.parseInt(stdIn.readLine());
                 fecha_fin = new Date(ano, mes, dia, hora, minuto);
 
-                
-                control.Curso(nombreCurso, tutor, cupo, lugar,fecha_inicio, fecha_fin);
+                control.Curso(nombreCurso, tutor, cupo, lugar, fecha_inicio, fecha_fin);
                 break;
             default:
                 System.out.println("Opcion invalida");

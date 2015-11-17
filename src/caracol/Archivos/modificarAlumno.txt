@@ -1,0 +1,14 @@
+*******************************************
+		MODIFICAR ALUMNO
+*******************************************
+
+		     MENU
+
+1. Cambiar Nombre
+2. Cambiar Edad
+3. Cambiar Telefono
+4. Cambiar Email
+5. Cambiar Direccion
+6. Regresar al menu anterior
+
+Porfavor escriba el numero del boton:
