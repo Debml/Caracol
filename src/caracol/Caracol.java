@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Date;
 
 /**
  *
@@ -22,10 +23,13 @@ public class Caracol {
         BufferedReader readFile = new BufferedReader (new FileReader 
              ("/Users/Mauro/Dropbox/5 Semestre/AMSS/McDinero/Caracol/Caracol/"
                      + "src/caracol/Archivos/interfaz.txt"));
-		
+	
+        Controlador control = new Controlador();
+        
         String line = readFile.readLine();
         String user;
         String password;
+        int menuOption;
         
         for (int i = 0; i < 10000; i++) {
             System.out.println("L");
@@ -78,11 +82,96 @@ public class Caracol {
             System.out.println("Conraseña:");
             password = stdIn.readLine();
        
-        }while(!iniciarSesion(user, password));
+        }while(false);//!iniciarSesion(user, password));
         
         System.out.println("*******************************************");
-        System.out.println("       Bienvenido " + user + "!");
+        System.out.println("             Bienvenido " + user + "!");
         System.out.println("*******************************************");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        
+        readFile = new BufferedReader (new FileReader 
+             ("/Users/Mauro/Dropbox/5 Semestre/AMSS/McDinero/Caracol/Caracol/"
+                     + "src/caracol/Archivos/menu.txt"));
+        //imprimir menu
+        line = readFile.readLine();
+        while(line != null) {
+            System.out.println(line);
+            line = readFile.readLine();
+        }
+        
+        menuOption = Integer.parseInt(stdIn.readLine());
+        
+        switch(menuOption) {
+            case 1:
+                String nombre, telefono, email, direccion;
+                int edad;
+                
+                System.out.println("Nombre del alumno:");
+                nombre = stdIn.readLine();
+                System.out.println("Edad del alumno:");
+                edad = Integer.parseInt(stdIn.readLine());
+                System.out.println("Telefono del alumno:");
+                telefono = stdIn.readLine();
+                System.out.println("Email del alumno:");
+                email = stdIn.readLine();
+                System.out.println("Dirección del alumno:");
+                direccion = stdIn.readLine();
+                
+                //registrarAlumno(String nombre, int edad, String telefono, String email, String direcion);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+                
+            case 4:
+                break;
+            case 5:
+                String nombreCurso, lugar, tutor;
+                Date fecha_inicio, fecha_fin;
+                int cupo, ano, mes, dia, hora, minuto;
+                
+                System.out.println("Nombre del curso:");
+                nombre = stdIn.readLine();
+                System.out.println("Lugar del curso:");
+                lugar = stdIn.readLine();
+                System.out.println("Cupo del curso:");
+                cupo = Integer.parseInt(stdIn.readLine());
+                System.out.println("Fecha de inicio del curso");
+                System.out.println("Año:");
+                ano = Integer.parseInt(stdIn.readLine());
+                System.out.println("Mes: (1-12)");
+                mes = Integer.parseInt(stdIn.readLine());
+                System.out.println("Día: (1-31)");
+                dia = Integer.parseInt(stdIn.readLine());
+                System.out.println("Hora: (Solo hora, 0-24)");
+                hora = Integer.parseInt(stdIn.readLine());
+                System.out.println("Minuto: (0-59)");
+                minuto = Integer.parseInt(stdIn.readLine());
+                fecha_inicio = new Date(ano, mes, dia, hora, minuto);
+                System.out.println("Fecha de fin del curso");
+                System.out.println("Año:");
+                ano = Integer.parseInt(stdIn.readLine());
+                System.out.println("Mes: (1-12)");
+                mes = Integer.parseInt(stdIn.readLine());
+                System.out.println("Día: (1-31)");
+                dia = Integer.parseInt(stdIn.readLine());
+                System.out.println("Hora: (Solo hora, 0-24)");
+                hora = Integer.parseInt(stdIn.readLine());
+                System.out.println("Minuto: (0-59)");
+                minuto = Integer.parseInt(stdIn.readLine());
+                fecha_fin = new Date(ano, mes, dia, hora, minuto);
+
+                
+                //registrarCurso(String nombreCurso, String tutor, int cupo, String lugar, Date fecha_inicio, Date fecha_fin);
+                break;
+            default:
+                System.out.println("Opcion invalida");
+                System.out.println("Porfavor escriba el numero del boton:");
+                break;
+        }
     }
     
     

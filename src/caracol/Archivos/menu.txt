@@ -1,0 +1,13 @@
+*******************************************
+		SISTEMA CARACOL
+*******************************************
+
+		     MENU
+
+1. Registrar Alumno
+2. Inscribir Alumno
+3. Modificar Alumno
+4. Eliminar Alumno
+5. Registrar Curso
+
+Porfavor escriba el numero del boton:
