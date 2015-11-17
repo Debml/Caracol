@@ -9,11 +9,6 @@ package caracol;
  *
  * @author Debml
  */
-public class Tutor extends Persona {
-    Curso clase;
-    
-    Tutor(String nombre, String telefono, String email, int id){
-        super(nombre, telefono, email, id);
-    }
+public class EstudianteCurso {
     
 }

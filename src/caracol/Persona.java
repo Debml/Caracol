@@ -13,10 +13,13 @@ public class Persona {
     String nombre;
     String telefono;
     String email;
+    int id;
     
-    public Persona(String nombre, String telefono, String email) {
-            this.nombre = nombre;
-            this.telefono = telefono;
-            this.email = email;
+    Persona(String nombre, String telefono, String email, int id){
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.email = email;
+        this.id = id;
     }
+    
 }
