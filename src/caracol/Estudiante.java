@@ -7,8 +7,35 @@ package caracol;
 
 /**
  *
- * @author Debml
+ * @author Debml and mauro
  */
-public class Estudiante {
-    
+public class Alumno extends Persona {
+   String direccion;
+	int edad;
+	
+	
+	public Estudiante(String nombre, String telefono, String email, String direccion, int edad) {
+		super(nombre, telefono, email);
+		this.direccion = direccion;
+		this.edad = edad;
+	}
+	
+	//eliminarEstudiante()
+	
+	public String getDireccion() {
+		return direccion;
+	}
+	
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
+	public int getEdad() {
+		return edad;
+	}
+	
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	
 }
