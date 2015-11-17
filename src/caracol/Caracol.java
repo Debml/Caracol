@@ -76,7 +76,7 @@ public class Caracol {
             System.out.println();
         
             //pedir usuario
-            System.out.println("Usuario:");
+            System.out.println("Usuario/id:");
             user = stdIn.readLine();
             //pedir contraseña
             System.out.println("Conraseña:");
@@ -119,7 +119,7 @@ public class Caracol {
                 System.out.println("Dirección del alumno:");
                 direccion = stdIn.readLine();
                 
-                //registrarAlumno(String nombre, int edad, String telefono, String email, String direcion);
+                control.Alumno(nombre, edad, telefono, email, direccion);
                 break;
             case 2:
                 break;
@@ -165,7 +165,7 @@ public class Caracol {
                 fecha_fin = new Date(ano, mes, dia, hora, minuto);
 
                 
-                //registrarCurso(String nombreCurso, String tutor, int cupo, String lugar, Date fecha_inicio, Date fecha_fin);
+                control.Curso(nombreCurso, tutor, cupo, lugar,fecha_inicio, fecha_fin);
                 break;
             default:
                 System.out.println("Opcion invalida");
