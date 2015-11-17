@@ -1,17 +1,6 @@
-
-
-
-
-
-
-
-
-
++++INICIO
 *******************************************
 	BIENVENIDO AL SISTEMA CARACOL
 *******************************************
 
-	FAVOR DE INICAR SESION
-
-
-
+FAVOR DE INICAR SESION:
