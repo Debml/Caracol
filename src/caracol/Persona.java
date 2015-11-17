@@ -10,5 +10,16 @@ package caracol;
  * @author Debml
  */
 public class Persona {
+    String nombre;
+    String telefono;
+    String email;
+    int id;
+    
+    Persona(String nombre, String telefono, String email, int id){
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.email = email;
+        this.id = id;
+    }
     
 }
