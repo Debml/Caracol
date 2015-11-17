@@ -128,8 +128,10 @@ public class Caracol {
                 int modAlumnoDecision = 0;
                 while(modAlumnoDecision != 6) {
                     readFile = new BufferedReader (new FileReader 
-             ("/Users/Mauro/Dropbox/5 Semestre/AMSS/McDinero/Caracol/Caracol/"
-                     + "src/caracol/Archivos/modificarAlumno.txt"));
+                                    ("/Users/Mauro/Dropbox/5 Semestre/AMSS"
+                                            + "/McDinero/Caracol/Caracol/"
+                                            + "src/caracol/Archivos/"
+                                            + "modificarAlumno.txt"));
                     //imprimir menu
                     line = readFile.readLine();
                     while(line != null) {
@@ -146,27 +148,32 @@ public class Caracol {
                         case 1:
                             System.out.println("Nuevo nombre del alumno:");
                             nombre = stdIn.readLine();
-                            control.modificarAlumno(nombreA, nombre, modAlumnoDecision);
+                            control.modificarAlumno(nombreA, nombre, 
+                                                             modAlumnoDecision);
                             break;
                         case 2:
                             System.out.println("Nueva edad del alumno:");
                             edadS = stdIn.readLine();
-                            control.modificarAlumno(nombreA, edadS, modAlumnoDecision);
+                            control.modificarAlumno(nombreA, edadS, 
+                                                             modAlumnoDecision);
                             break;
                         case 3:
                             System.out.println("Nuevo telefono del alumno:");
                             telefono = stdIn.readLine();
-                            control.modificarAlumno(nombreA, telefono, modAlumnoDecision);
+                            control.modificarAlumno(nombreA, telefono, 
+                                                             modAlumnoDecision);
                             break;
                         case 4:
                             System.out.println("Nuevo email del alumno:");
                             email = stdIn.readLine();
-                            control.modificarAlumno(nombreA, email, modAlumnoDecision);
+                            control.modificarAlumno(nombreA, email, 
+                                                             modAlumnoDecision);
                             break;
                         case 5:
                             System.out.println("Nueva dirección del alumno:");
                             direccion = stdIn.readLine();
-                            control.modificarAlumno(nombreA, direccion, modAlumnoDecision);
+                            control.modificarAlumno(nombreA, direccion, 
+                                                             modAlumnoDecision);
                             break;
                         default:
                             break;
@@ -217,23 +224,13 @@ public class Caracol {
                 minuto = Integer.parseInt(stdIn.readLine());
                 fecha_fin = new Date(ano, mes, dia, hora, minuto);
 
-                control.Curso(nombreCurso, tutor, cupo, lugar, fecha_inicio, fecha_fin);
+                control.Curso(nombreCurso, tutor, cupo, lugar, fecha_inicio, 
+                                                                     fecha_fin);
                 break;
             default:
                 System.out.println("Opcion invalida");
                 System.out.println("Porfavor escriba el numero del boton:");
                 break;
         }
-    }
-    
-    
-    
-    /*
-    + eliminarAlumno(id : Integer)
-+ iniciarSesion(usuario : Administrador, password : String)
-+ inscribirAlumno(AlumnoID : Integer, CursoID : Integer)
-+ modificarAlumno(x : Estudiante)
-+ registrarAlumno(nombre : String, edad : Integer, telefono : String, email : String, direccion : String)
-+registrarCurso(nombre : String, tutor : Tutor, cupo : Integer, lugar : String, fecha_inicio : Date, fecha_fin : Date)*/
-    
+    }    
 }
